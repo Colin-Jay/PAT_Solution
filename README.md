@@ -22,5 +22,5 @@
 
 ps：附上Google的C++代码规范
 
-![](.\CodeStandard.jpg)
+![](https://github.com/Colin-Jay/PAT_Solution/blob/master/CodeStandard.jpg)
 
