@@ -1,14 +1,15 @@
 #include<cstdio>
 #include<cstring>
 
+const int MAXN = 100010;
 const int MOD = 1000000007;
+char PATs[MAXN];
+int PA[MAXN], AT[MAXN]; //记录每个A之前的P的个数A之后的T的个数
 
 int main() {
-    char PATs[100010];
     scanf("%s", PATs);
     int len = strlen(PATs);
     int cntP = 0, cntA = 0, cntT = 0, cntPAT = 0; //分别记录P,A,T，PAT的总数
-    int PA[100010], AT[100010]; //记录每个A之前的P的个数A之后的T的个数
 
     //先确定每个A之前的P的个数
     for(int i = 0; i < len; i++) {
