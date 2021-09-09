@@ -32,7 +32,7 @@ AVLNode *AVLTreeInsert (AVLTree &T, int val) {        //插入新的结点
    }
 }
 
-int AVLTreeHeight (AVLTree &T) {                      //求高度
+int AVLTreeHeight (AVLTree T) {                      //求高度
    if (T == NULL) {
       return 0;
    } else {
@@ -45,7 +45,7 @@ int AVLTreeHeight (AVLTree &T) {                      //求高度
    }
 }
 
-void SetParent (AVLTree &T) {                         //设置双亲结点
+void SetParent (AVLTree T) {                         //设置双亲结点
    if (T == NULL) {
       return; 
    }
@@ -59,7 +59,7 @@ void SetParent (AVLTree &T) {                         //设置双亲结点
    }
 }
 
-void AVLTreeLrevov (AVLTree &p, AVLTree &T) {         //左旋操作
+void AVLTreeLrevov (AVLTree p, AVLTree &T) {         //左旋操作
    if (p->parent->parent != NULL) {                   //首先判断需要旋转的结点的双亲结点的双亲结点是否为空
       if (p->parent->val < p->parent->parent->val) {  //若不为空，则需要将其指针指向需要旋转的结点
          p->parent->parent->lchild = p;               //根据大小规则判断是更改其祖先的左孩子指针还是右孩子指针
@@ -75,7 +75,7 @@ void AVLTreeLrevov (AVLTree &p, AVLTree &T) {         //左旋操作
    }
 }
 
-void AVLTreeRrevov (AVLTree &p, AVLTree &T) {         //右旋操作
+void AVLTreeRrevov (AVLTree p, AVLTree &T) {         //右旋操作
    if (p->parent->parent != NULL) {                   //首先判断需要旋转的结点的双亲结点的双亲结点是否为空
       if (p->parent->val < p->parent->parent->val) {  //若不为空，则需要将其指针指向需要旋转的结点
          p->parent->parent->lchild = p;               //根据大小规则判断是更改其祖先的左孩子指针还是右孩子指针
